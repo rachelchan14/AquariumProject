@@ -41,7 +41,7 @@ public class AquaSimApplication
         userInterface = new AquaSimGUI(aqua);  // ... and then GUI itself
 
         // Tell the user how to start the aquarium simulation.
-        System.out.println("Press the Start button to start the simulation.");
+        System.out.println("Welcome to the fish-less aquarium! :)");
 
         // Now wait for the user to press the start button.
         userInterface.waitForStart();
