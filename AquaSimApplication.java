@@ -33,7 +33,12 @@ public class AquaSimApplication
 
         // Construct fish and add them to the aquarium.
         //      CODE MISSING HERE!
-
+        AquaFish ghost = new AquaFish(aqua);
+        aqua.add(ghost);
+        AquaFish vicky = new AquaFish(aqua);
+        aqua.add(vicky);
+        AquaFish shamu = new AquaFish(aqua);
+        aqua.add(shamu);
         // Construct a graphical user interface (GUI) to display and control
         // the simulation.  The user interface needs to know about the
         // aquarium, so we pass aqua to the user interface constructor.
@@ -49,12 +54,15 @@ public class AquaSimApplication
         // Draw the initial view of the aquarium and its contents.
         userInterface.showAquarium();
 
-
         // RUN THE AQUARIUM SIMULATION.
 
         // Make the fish move and redisplay.
         //      CODE MISSING HERE!
-
+        ghost.moveForward();
+        vicky.moveForward();
+        shamu.moveForward();
+        userInterface.showAquarium();
+        
 
         // WRAP UP.
 
