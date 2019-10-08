@@ -26,18 +26,20 @@ public class AquaSimApplication
         System.out.println("This will be an aquarium simulation.");
 
         // CONSTRUCT OBJECTS NEEDED FOR THE AQUARIUM SIMULATION.
-
+        Random generator = new Random();
+        int random = generator.nextInt(10);
+        random = generator.nextInt(10);
         // Construct the aquarium.  Specify its dimensions when creating it.
         Aquarium aqua;                 // create reference to an Aquarium ...
-        aqua = new Aquarium(600, 480); // ... object that has now been created
+        aqua = new Aquarium(1000,1000); // ... object that has now been created
 
         // Construct fish and add them to the aquarium.
         //      CODE MISSING HERE!
-        AquaFish ghost = new AquaFish(aqua);
+        AquaFish ghost = new AquaFish(aqua, Color.RED);
         aqua.add(ghost);
-        AquaFish vicky = new AquaFish(aqua);
+        AquaFish vicky = new AquaFish(aqua, Color.BLACK);
         aqua.add(vicky);
-        AquaFish shamu = new AquaFish(aqua);
+        AquaFish shamu = new AquaFish(aqua, Color.YELLOW);
         aqua.add(shamu);
         // Construct a graphical user interface (GUI) to display and control
         // the simulation.  The user interface needs to know about the
@@ -58,17 +60,39 @@ public class AquaSimApplication
 
         // Make the fish move and redisplay.
         //      CODE MISSING HERE!
-        ghost.moveForward();
-        vicky.moveForward();
-        shamu.moveForward();
-        userInterface.showAquarium();
         
+        for (int i = 1; i>0; i++)
+        {
+            ghost.moveForward();
+            if (ghost.atWall()==true)
+            {
+                ghost.changeDir();
+                ghost.moveForward();
+            }
+            vicky.moveForward();
+            if (vicky.atWall()==true)
+            {
+                vicky.changeDir();
+                vicky.moveForward();
+            }
+            shamu.moveForward();
+            if (shamu.atWall()==true)
+            {
+                shamu.changeDir();
+                shamu.moveForward();
+            }
+        userInterface.showAquarium();
+    }
+   
+
 
         // WRAP UP.
 
         // Remind user how to quit application.
-        userInterface.println ("Close GUI display window to quit.");
+        
 
-    }//end main
-
+        //end main
+    userInterface.println ("Close GUI display window to quit.");
 }//end class
+
+}

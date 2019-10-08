@@ -47,14 +47,23 @@ public class Aquarium
      */
     public Aquarium(int width, int height)
     {
-        if (width > 0)
+        /*if (width > 0)
             myWidth = width;
         else
             myWidth = 640;
         if (height > 0)
             myHeight = height;
         else
-            myHeight = 480;
+            myHeight = 480;*/
+            
+        if (width > 0)
+            myWidth = width;
+        else
+            myWidth = 100;
+        if (height > 0)
+            myHeight = height;
+        else
+            myHeight = 200;
 
         borderPadding = 10;
 
