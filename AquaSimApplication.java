@@ -34,7 +34,7 @@ public class AquaSimApplication
         
         // Construct the aquarium.  Specify its dimensions when creating it.
         Aquarium aqua;                 // create reference to an Aquarium ...
-        aqua = new Aquarium(1000,1000);
+        aqua = new Aquarium(2000,2000);
         
         // ... object that has now been created
 
@@ -106,7 +106,7 @@ public class AquaSimApplication
         //      CODE MISSING HERE!
      for (int i = 1; i<=number; i++)
      {
-         int randNumb = generator.nextInt(6);
+         int randNumb = generator.nextInt(12);
          if (randNumb == 0)
         {
             AquaFish fish = new AquaFish(aqua, Color.RED);
